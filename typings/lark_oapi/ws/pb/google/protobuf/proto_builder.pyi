@@ -1,0 +1,3 @@
+from lark_oapi.ws.pb.google.protobuf import descriptor as descriptor, descriptor_pb2 as descriptor_pb2, message_factory as message_factory
+
+def MakeSimpleProtoClass(fields, full_name=None, pool=None): ...

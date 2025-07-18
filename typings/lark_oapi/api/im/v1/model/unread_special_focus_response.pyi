@@ -1,0 +1,8 @@
+from typing import *
+from .unread_special_focus_response_body import UnreadSpecialFocusResponseBody as UnreadSpecialFocusResponseBody
+from lark_oapi.core.construct import init as init
+from lark_oapi.core.model import BaseResponse as BaseResponse
+
+class UnreadSpecialFocusResponse(BaseResponse):
+    data: Optional[UnreadSpecialFocusResponseBody]
+    def __init__(self, d=None) -> None: ...

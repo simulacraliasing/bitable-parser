@@ -1,0 +1,23 @@
+from ..model.create_moto_request import CreateMotoRequest as CreateMotoRequest
+from ..model.create_moto_response import CreateMotoResponse as CreateMotoResponse
+from ..model.get_moto_request import GetMotoRequest as GetMotoRequest
+from ..model.get_moto_response import GetMotoResponse as GetMotoResponse
+from ..model.list_moto_request import ListMotoRequest as ListMotoRequest
+from ..model.list_moto_response import ListMotoResponse as ListMotoResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Moto:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateMotoRequest, option: RequestOption | None = None) -> CreateMotoResponse: ...
+    async def acreate(self, request: CreateMotoRequest, option: RequestOption | None = None) -> CreateMotoResponse: ...
+    def get(self, request: GetMotoRequest, option: RequestOption | None = None) -> GetMotoResponse: ...
+    async def aget(self, request: GetMotoRequest, option: RequestOption | None = None) -> GetMotoResponse: ...
+    def list(self, request: ListMotoRequest, option: RequestOption | None = None) -> ListMotoResponse: ...
+    async def alist(self, request: ListMotoRequest, option: RequestOption | None = None) -> ListMotoResponse: ...

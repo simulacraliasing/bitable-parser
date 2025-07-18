@@ -1,0 +1,23 @@
+from ..model.get_user_request import GetUserRequest as GetUserRequest
+from ..model.get_user_response import GetUserResponse as GetUserResponse
+from ..model.list_user_request import ListUserRequest as ListUserRequest
+from ..model.list_user_response import ListUserResponse as ListUserResponse
+from ..model.patch_user_request import PatchUserRequest as PatchUserRequest
+from ..model.patch_user_response import PatchUserResponse as PatchUserResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class User:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def get(self, request: GetUserRequest, option: RequestOption | None = None) -> GetUserResponse: ...
+    async def aget(self, request: GetUserRequest, option: RequestOption | None = None) -> GetUserResponse: ...
+    def list(self, request: ListUserRequest, option: RequestOption | None = None) -> ListUserResponse: ...
+    async def alist(self, request: ListUserRequest, option: RequestOption | None = None) -> ListUserResponse: ...
+    def patch(self, request: PatchUserRequest, option: RequestOption | None = None) -> PatchUserResponse: ...
+    async def apatch(self, request: PatchUserRequest, option: RequestOption | None = None) -> PatchUserResponse: ...

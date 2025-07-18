@@ -1,0 +1,23 @@
+from ..model.batch_delete_chat_announcement_block_children_request import BatchDeleteChatAnnouncementBlockChildrenRequest as BatchDeleteChatAnnouncementBlockChildrenRequest
+from ..model.batch_delete_chat_announcement_block_children_response import BatchDeleteChatAnnouncementBlockChildrenResponse as BatchDeleteChatAnnouncementBlockChildrenResponse
+from ..model.create_chat_announcement_block_children_request import CreateChatAnnouncementBlockChildrenRequest as CreateChatAnnouncementBlockChildrenRequest
+from ..model.create_chat_announcement_block_children_response import CreateChatAnnouncementBlockChildrenResponse as CreateChatAnnouncementBlockChildrenResponse
+from ..model.get_chat_announcement_block_children_request import GetChatAnnouncementBlockChildrenRequest as GetChatAnnouncementBlockChildrenRequest
+from ..model.get_chat_announcement_block_children_response import GetChatAnnouncementBlockChildrenResponse as GetChatAnnouncementBlockChildrenResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ChatAnnouncementBlockChildren:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_delete(self, request: BatchDeleteChatAnnouncementBlockChildrenRequest, option: RequestOption | None = None) -> BatchDeleteChatAnnouncementBlockChildrenResponse: ...
+    async def abatch_delete(self, request: BatchDeleteChatAnnouncementBlockChildrenRequest, option: RequestOption | None = None) -> BatchDeleteChatAnnouncementBlockChildrenResponse: ...
+    def create(self, request: CreateChatAnnouncementBlockChildrenRequest, option: RequestOption | None = None) -> CreateChatAnnouncementBlockChildrenResponse: ...
+    async def acreate(self, request: CreateChatAnnouncementBlockChildrenRequest, option: RequestOption | None = None) -> CreateChatAnnouncementBlockChildrenResponse: ...
+    def get(self, request: GetChatAnnouncementBlockChildrenRequest, option: RequestOption | None = None) -> GetChatAnnouncementBlockChildrenResponse: ...
+    async def aget(self, request: GetChatAnnouncementBlockChildrenRequest, option: RequestOption | None = None) -> GetChatAnnouncementBlockChildrenResponse: ...

@@ -1,0 +1,23 @@
+from ..model.create_space_member_request import CreateSpaceMemberRequest as CreateSpaceMemberRequest
+from ..model.create_space_member_response import CreateSpaceMemberResponse as CreateSpaceMemberResponse
+from ..model.delete_space_member_request import DeleteSpaceMemberRequest as DeleteSpaceMemberRequest
+from ..model.delete_space_member_response import DeleteSpaceMemberResponse as DeleteSpaceMemberResponse
+from ..model.list_space_member_request import ListSpaceMemberRequest as ListSpaceMemberRequest
+from ..model.list_space_member_response import ListSpaceMemberResponse as ListSpaceMemberResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class SpaceMember:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateSpaceMemberRequest, option: RequestOption | None = None) -> CreateSpaceMemberResponse: ...
+    async def acreate(self, request: CreateSpaceMemberRequest, option: RequestOption | None = None) -> CreateSpaceMemberResponse: ...
+    def delete(self, request: DeleteSpaceMemberRequest, option: RequestOption | None = None) -> DeleteSpaceMemberResponse: ...
+    async def adelete(self, request: DeleteSpaceMemberRequest, option: RequestOption | None = None) -> DeleteSpaceMemberResponse: ...
+    def list(self, request: ListSpaceMemberRequest, option: RequestOption | None = None) -> ListSpaceMemberResponse: ...
+    async def alist(self, request: ListSpaceMemberRequest, option: RequestOption | None = None) -> ListSpaceMemberResponse: ...

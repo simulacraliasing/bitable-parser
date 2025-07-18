@@ -1,0 +1,23 @@
+from ..model.create_exchange_binding_request import CreateExchangeBindingRequest as CreateExchangeBindingRequest
+from ..model.create_exchange_binding_response import CreateExchangeBindingResponse as CreateExchangeBindingResponse
+from ..model.delete_exchange_binding_request import DeleteExchangeBindingRequest as DeleteExchangeBindingRequest
+from ..model.delete_exchange_binding_response import DeleteExchangeBindingResponse as DeleteExchangeBindingResponse
+from ..model.get_exchange_binding_request import GetExchangeBindingRequest as GetExchangeBindingRequest
+from ..model.get_exchange_binding_response import GetExchangeBindingResponse as GetExchangeBindingResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ExchangeBinding:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateExchangeBindingRequest, option: RequestOption | None = None) -> CreateExchangeBindingResponse: ...
+    async def acreate(self, request: CreateExchangeBindingRequest, option: RequestOption | None = None) -> CreateExchangeBindingResponse: ...
+    def delete(self, request: DeleteExchangeBindingRequest, option: RequestOption | None = None) -> DeleteExchangeBindingResponse: ...
+    async def adelete(self, request: DeleteExchangeBindingRequest, option: RequestOption | None = None) -> DeleteExchangeBindingResponse: ...
+    def get(self, request: GetExchangeBindingRequest, option: RequestOption | None = None) -> GetExchangeBindingResponse: ...
+    async def aget(self, request: GetExchangeBindingRequest, option: RequestOption | None = None) -> GetExchangeBindingResponse: ...

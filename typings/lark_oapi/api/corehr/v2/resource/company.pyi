@@ -1,0 +1,23 @@
+from ..model.active_company_request import ActiveCompanyRequest as ActiveCompanyRequest
+from ..model.active_company_response import ActiveCompanyResponse as ActiveCompanyResponse
+from ..model.batch_get_company_request import BatchGetCompanyRequest as BatchGetCompanyRequest
+from ..model.batch_get_company_response import BatchGetCompanyResponse as BatchGetCompanyResponse
+from ..model.query_recent_change_company_request import QueryRecentChangeCompanyRequest as QueryRecentChangeCompanyRequest
+from ..model.query_recent_change_company_response import QueryRecentChangeCompanyResponse as QueryRecentChangeCompanyResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Company:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def active(self, request: ActiveCompanyRequest, option: RequestOption | None = None) -> ActiveCompanyResponse: ...
+    async def aactive(self, request: ActiveCompanyRequest, option: RequestOption | None = None) -> ActiveCompanyResponse: ...
+    def batch_get(self, request: BatchGetCompanyRequest, option: RequestOption | None = None) -> BatchGetCompanyResponse: ...
+    async def abatch_get(self, request: BatchGetCompanyRequest, option: RequestOption | None = None) -> BatchGetCompanyResponse: ...
+    def query_recent_change(self, request: QueryRecentChangeCompanyRequest, option: RequestOption | None = None) -> QueryRecentChangeCompanyResponse: ...
+    async def aquery_recent_change(self, request: QueryRecentChangeCompanyRequest, option: RequestOption | None = None) -> QueryRecentChangeCompanyResponse: ...

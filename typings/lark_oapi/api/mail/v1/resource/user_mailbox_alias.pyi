@@ -1,0 +1,23 @@
+from ..model.create_user_mailbox_alias_request import CreateUserMailboxAliasRequest as CreateUserMailboxAliasRequest
+from ..model.create_user_mailbox_alias_response import CreateUserMailboxAliasResponse as CreateUserMailboxAliasResponse
+from ..model.delete_user_mailbox_alias_request import DeleteUserMailboxAliasRequest as DeleteUserMailboxAliasRequest
+from ..model.delete_user_mailbox_alias_response import DeleteUserMailboxAliasResponse as DeleteUserMailboxAliasResponse
+from ..model.list_user_mailbox_alias_request import ListUserMailboxAliasRequest as ListUserMailboxAliasRequest
+from ..model.list_user_mailbox_alias_response import ListUserMailboxAliasResponse as ListUserMailboxAliasResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class UserMailboxAlias:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateUserMailboxAliasRequest, option: RequestOption | None = None) -> CreateUserMailboxAliasResponse: ...
+    async def acreate(self, request: CreateUserMailboxAliasRequest, option: RequestOption | None = None) -> CreateUserMailboxAliasResponse: ...
+    def delete(self, request: DeleteUserMailboxAliasRequest, option: RequestOption | None = None) -> DeleteUserMailboxAliasResponse: ...
+    async def adelete(self, request: DeleteUserMailboxAliasRequest, option: RequestOption | None = None) -> DeleteUserMailboxAliasResponse: ...
+    def list(self, request: ListUserMailboxAliasRequest, option: RequestOption | None = None) -> ListUserMailboxAliasResponse: ...
+    async def alist(self, request: ListUserMailboxAliasRequest, option: RequestOption | None = None) -> ListUserMailboxAliasResponse: ...

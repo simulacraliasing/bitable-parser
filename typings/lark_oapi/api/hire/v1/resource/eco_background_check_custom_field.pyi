@@ -1,0 +1,23 @@
+from ..model.batch_delete_eco_background_check_custom_field_request import BatchDeleteEcoBackgroundCheckCustomFieldRequest as BatchDeleteEcoBackgroundCheckCustomFieldRequest
+from ..model.batch_delete_eco_background_check_custom_field_response import BatchDeleteEcoBackgroundCheckCustomFieldResponse as BatchDeleteEcoBackgroundCheckCustomFieldResponse
+from ..model.batch_update_eco_background_check_custom_field_request import BatchUpdateEcoBackgroundCheckCustomFieldRequest as BatchUpdateEcoBackgroundCheckCustomFieldRequest
+from ..model.batch_update_eco_background_check_custom_field_response import BatchUpdateEcoBackgroundCheckCustomFieldResponse as BatchUpdateEcoBackgroundCheckCustomFieldResponse
+from ..model.create_eco_background_check_custom_field_request import CreateEcoBackgroundCheckCustomFieldRequest as CreateEcoBackgroundCheckCustomFieldRequest
+from ..model.create_eco_background_check_custom_field_response import CreateEcoBackgroundCheckCustomFieldResponse as CreateEcoBackgroundCheckCustomFieldResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class EcoBackgroundCheckCustomField:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_delete(self, request: BatchDeleteEcoBackgroundCheckCustomFieldRequest, option: RequestOption | None = None) -> BatchDeleteEcoBackgroundCheckCustomFieldResponse: ...
+    async def abatch_delete(self, request: BatchDeleteEcoBackgroundCheckCustomFieldRequest, option: RequestOption | None = None) -> BatchDeleteEcoBackgroundCheckCustomFieldResponse: ...
+    def batch_update(self, request: BatchUpdateEcoBackgroundCheckCustomFieldRequest, option: RequestOption | None = None) -> BatchUpdateEcoBackgroundCheckCustomFieldResponse: ...
+    async def abatch_update(self, request: BatchUpdateEcoBackgroundCheckCustomFieldRequest, option: RequestOption | None = None) -> BatchUpdateEcoBackgroundCheckCustomFieldResponse: ...
+    def create(self, request: CreateEcoBackgroundCheckCustomFieldRequest, option: RequestOption | None = None) -> CreateEcoBackgroundCheckCustomFieldResponse: ...
+    async def acreate(self, request: CreateEcoBackgroundCheckCustomFieldRequest, option: RequestOption | None = None) -> CreateEcoBackgroundCheckCustomFieldResponse: ...

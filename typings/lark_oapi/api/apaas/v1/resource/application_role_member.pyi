@@ -1,0 +1,23 @@
+from ..model.batch_create_authorization_application_role_member_request import BatchCreateAuthorizationApplicationRoleMemberRequest as BatchCreateAuthorizationApplicationRoleMemberRequest
+from ..model.batch_create_authorization_application_role_member_response import BatchCreateAuthorizationApplicationRoleMemberResponse as BatchCreateAuthorizationApplicationRoleMemberResponse
+from ..model.batch_remove_authorization_application_role_member_request import BatchRemoveAuthorizationApplicationRoleMemberRequest as BatchRemoveAuthorizationApplicationRoleMemberRequest
+from ..model.batch_remove_authorization_application_role_member_response import BatchRemoveAuthorizationApplicationRoleMemberResponse as BatchRemoveAuthorizationApplicationRoleMemberResponse
+from ..model.get_application_role_member_request import GetApplicationRoleMemberRequest as GetApplicationRoleMemberRequest
+from ..model.get_application_role_member_response import GetApplicationRoleMemberResponse as GetApplicationRoleMemberResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ApplicationRoleMember:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_create_authorization(self, request: BatchCreateAuthorizationApplicationRoleMemberRequest, option: RequestOption | None = None) -> BatchCreateAuthorizationApplicationRoleMemberResponse: ...
+    async def abatch_create_authorization(self, request: BatchCreateAuthorizationApplicationRoleMemberRequest, option: RequestOption | None = None) -> BatchCreateAuthorizationApplicationRoleMemberResponse: ...
+    def batch_remove_authorization(self, request: BatchRemoveAuthorizationApplicationRoleMemberRequest, option: RequestOption | None = None) -> BatchRemoveAuthorizationApplicationRoleMemberResponse: ...
+    async def abatch_remove_authorization(self, request: BatchRemoveAuthorizationApplicationRoleMemberRequest, option: RequestOption | None = None) -> BatchRemoveAuthorizationApplicationRoleMemberResponse: ...
+    def get(self, request: GetApplicationRoleMemberRequest, option: RequestOption | None = None) -> GetApplicationRoleMemberResponse: ...
+    async def aget(self, request: GetApplicationRoleMemberRequest, option: RequestOption | None = None) -> GetApplicationRoleMemberResponse: ...

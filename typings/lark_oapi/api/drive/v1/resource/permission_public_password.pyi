@@ -1,0 +1,23 @@
+from ..model.create_permission_public_password_request import CreatePermissionPublicPasswordRequest as CreatePermissionPublicPasswordRequest
+from ..model.create_permission_public_password_response import CreatePermissionPublicPasswordResponse as CreatePermissionPublicPasswordResponse
+from ..model.delete_permission_public_password_request import DeletePermissionPublicPasswordRequest as DeletePermissionPublicPasswordRequest
+from ..model.delete_permission_public_password_response import DeletePermissionPublicPasswordResponse as DeletePermissionPublicPasswordResponse
+from ..model.update_permission_public_password_request import UpdatePermissionPublicPasswordRequest as UpdatePermissionPublicPasswordRequest
+from ..model.update_permission_public_password_response import UpdatePermissionPublicPasswordResponse as UpdatePermissionPublicPasswordResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class PermissionPublicPassword:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreatePermissionPublicPasswordRequest, option: RequestOption | None = None) -> CreatePermissionPublicPasswordResponse: ...
+    async def acreate(self, request: CreatePermissionPublicPasswordRequest, option: RequestOption | None = None) -> CreatePermissionPublicPasswordResponse: ...
+    def delete(self, request: DeletePermissionPublicPasswordRequest, option: RequestOption | None = None) -> DeletePermissionPublicPasswordResponse: ...
+    async def adelete(self, request: DeletePermissionPublicPasswordRequest, option: RequestOption | None = None) -> DeletePermissionPublicPasswordResponse: ...
+    def update(self, request: UpdatePermissionPublicPasswordRequest, option: RequestOption | None = None) -> UpdatePermissionPublicPasswordResponse: ...
+    async def aupdate(self, request: UpdatePermissionPublicPasswordRequest, option: RequestOption | None = None) -> UpdatePermissionPublicPasswordResponse: ...

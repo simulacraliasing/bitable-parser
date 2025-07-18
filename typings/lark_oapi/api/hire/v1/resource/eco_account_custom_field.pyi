@@ -1,0 +1,23 @@
+from ..model.batch_delete_eco_account_custom_field_request import BatchDeleteEcoAccountCustomFieldRequest as BatchDeleteEcoAccountCustomFieldRequest
+from ..model.batch_delete_eco_account_custom_field_response import BatchDeleteEcoAccountCustomFieldResponse as BatchDeleteEcoAccountCustomFieldResponse
+from ..model.batch_update_eco_account_custom_field_request import BatchUpdateEcoAccountCustomFieldRequest as BatchUpdateEcoAccountCustomFieldRequest
+from ..model.batch_update_eco_account_custom_field_response import BatchUpdateEcoAccountCustomFieldResponse as BatchUpdateEcoAccountCustomFieldResponse
+from ..model.create_eco_account_custom_field_request import CreateEcoAccountCustomFieldRequest as CreateEcoAccountCustomFieldRequest
+from ..model.create_eco_account_custom_field_response import CreateEcoAccountCustomFieldResponse as CreateEcoAccountCustomFieldResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class EcoAccountCustomField:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_delete(self, request: BatchDeleteEcoAccountCustomFieldRequest, option: RequestOption | None = None) -> BatchDeleteEcoAccountCustomFieldResponse: ...
+    async def abatch_delete(self, request: BatchDeleteEcoAccountCustomFieldRequest, option: RequestOption | None = None) -> BatchDeleteEcoAccountCustomFieldResponse: ...
+    def batch_update(self, request: BatchUpdateEcoAccountCustomFieldRequest, option: RequestOption | None = None) -> BatchUpdateEcoAccountCustomFieldResponse: ...
+    async def abatch_update(self, request: BatchUpdateEcoAccountCustomFieldRequest, option: RequestOption | None = None) -> BatchUpdateEcoAccountCustomFieldResponse: ...
+    def create(self, request: CreateEcoAccountCustomFieldRequest, option: RequestOption | None = None) -> CreateEcoAccountCustomFieldResponse: ...
+    async def acreate(self, request: CreateEcoAccountCustomFieldRequest, option: RequestOption | None = None) -> CreateEcoAccountCustomFieldResponse: ...

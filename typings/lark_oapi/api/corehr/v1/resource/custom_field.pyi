@@ -1,0 +1,23 @@
+from ..model.get_by_param_custom_field_request import GetByParamCustomFieldRequest as GetByParamCustomFieldRequest
+from ..model.get_by_param_custom_field_response import GetByParamCustomFieldResponse as GetByParamCustomFieldResponse
+from ..model.list_object_api_name_custom_field_request import ListObjectApiNameCustomFieldRequest as ListObjectApiNameCustomFieldRequest
+from ..model.list_object_api_name_custom_field_response import ListObjectApiNameCustomFieldResponse as ListObjectApiNameCustomFieldResponse
+from ..model.query_custom_field_request import QueryCustomFieldRequest as QueryCustomFieldRequest
+from ..model.query_custom_field_response import QueryCustomFieldResponse as QueryCustomFieldResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class CustomField:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def get_by_param(self, request: GetByParamCustomFieldRequest, option: RequestOption | None = None) -> GetByParamCustomFieldResponse: ...
+    async def aget_by_param(self, request: GetByParamCustomFieldRequest, option: RequestOption | None = None) -> GetByParamCustomFieldResponse: ...
+    def list_object_api_name(self, request: ListObjectApiNameCustomFieldRequest, option: RequestOption | None = None) -> ListObjectApiNameCustomFieldResponse: ...
+    async def alist_object_api_name(self, request: ListObjectApiNameCustomFieldRequest, option: RequestOption | None = None) -> ListObjectApiNameCustomFieldResponse: ...
+    def query(self, request: QueryCustomFieldRequest, option: RequestOption | None = None) -> QueryCustomFieldResponse: ...
+    async def aquery(self, request: QueryCustomFieldRequest, option: RequestOption | None = None) -> QueryCustomFieldResponse: ...

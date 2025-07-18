@@ -1,0 +1,23 @@
+from ..model.department_overview_application_app_usage_request import DepartmentOverviewApplicationAppUsageRequest as DepartmentOverviewApplicationAppUsageRequest
+from ..model.department_overview_application_app_usage_response import DepartmentOverviewApplicationAppUsageResponse as DepartmentOverviewApplicationAppUsageResponse
+from ..model.message_push_overview_application_app_usage_request import MessagePushOverviewApplicationAppUsageRequest as MessagePushOverviewApplicationAppUsageRequest
+from ..model.message_push_overview_application_app_usage_response import MessagePushOverviewApplicationAppUsageResponse as MessagePushOverviewApplicationAppUsageResponse
+from ..model.overview_application_app_usage_request import OverviewApplicationAppUsageRequest as OverviewApplicationAppUsageRequest
+from ..model.overview_application_app_usage_response import OverviewApplicationAppUsageResponse as OverviewApplicationAppUsageResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ApplicationAppUsage:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def department_overview(self, request: DepartmentOverviewApplicationAppUsageRequest, option: RequestOption | None = None) -> DepartmentOverviewApplicationAppUsageResponse: ...
+    async def adepartment_overview(self, request: DepartmentOverviewApplicationAppUsageRequest, option: RequestOption | None = None) -> DepartmentOverviewApplicationAppUsageResponse: ...
+    def message_push_overview(self, request: MessagePushOverviewApplicationAppUsageRequest, option: RequestOption | None = None) -> MessagePushOverviewApplicationAppUsageResponse: ...
+    async def amessage_push_overview(self, request: MessagePushOverviewApplicationAppUsageRequest, option: RequestOption | None = None) -> MessagePushOverviewApplicationAppUsageResponse: ...
+    def overview(self, request: OverviewApplicationAppUsageRequest, option: RequestOption | None = None) -> OverviewApplicationAppUsageResponse: ...
+    async def aoverview(self, request: OverviewApplicationAppUsageRequest, option: RequestOption | None = None) -> OverviewApplicationAppUsageResponse: ...

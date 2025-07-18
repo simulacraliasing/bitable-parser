@@ -1,0 +1,23 @@
+from ..model.create_spreadsheet_request import CreateSpreadsheetRequest as CreateSpreadsheetRequest
+from ..model.create_spreadsheet_response import CreateSpreadsheetResponse as CreateSpreadsheetResponse
+from ..model.get_spreadsheet_request import GetSpreadsheetRequest as GetSpreadsheetRequest
+from ..model.get_spreadsheet_response import GetSpreadsheetResponse as GetSpreadsheetResponse
+from ..model.patch_spreadsheet_request import PatchSpreadsheetRequest as PatchSpreadsheetRequest
+from ..model.patch_spreadsheet_response import PatchSpreadsheetResponse as PatchSpreadsheetResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Spreadsheet:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateSpreadsheetRequest, option: RequestOption | None = None) -> CreateSpreadsheetResponse: ...
+    async def acreate(self, request: CreateSpreadsheetRequest, option: RequestOption | None = None) -> CreateSpreadsheetResponse: ...
+    def get(self, request: GetSpreadsheetRequest, option: RequestOption | None = None) -> GetSpreadsheetResponse: ...
+    async def aget(self, request: GetSpreadsheetRequest, option: RequestOption | None = None) -> GetSpreadsheetResponse: ...
+    def patch(self, request: PatchSpreadsheetRequest, option: RequestOption | None = None) -> PatchSpreadsheetResponse: ...
+    async def apatch(self, request: PatchSpreadsheetRequest, option: RequestOption | None = None) -> PatchSpreadsheetResponse: ...

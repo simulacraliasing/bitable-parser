@@ -1,0 +1,23 @@
+from ..model.batch_delete_eco_exam_paper_request import BatchDeleteEcoExamPaperRequest as BatchDeleteEcoExamPaperRequest
+from ..model.batch_delete_eco_exam_paper_response import BatchDeleteEcoExamPaperResponse as BatchDeleteEcoExamPaperResponse
+from ..model.batch_update_eco_exam_paper_request import BatchUpdateEcoExamPaperRequest as BatchUpdateEcoExamPaperRequest
+from ..model.batch_update_eco_exam_paper_response import BatchUpdateEcoExamPaperResponse as BatchUpdateEcoExamPaperResponse
+from ..model.create_eco_exam_paper_request import CreateEcoExamPaperRequest as CreateEcoExamPaperRequest
+from ..model.create_eco_exam_paper_response import CreateEcoExamPaperResponse as CreateEcoExamPaperResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class EcoExamPaper:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_delete(self, request: BatchDeleteEcoExamPaperRequest, option: RequestOption | None = None) -> BatchDeleteEcoExamPaperResponse: ...
+    async def abatch_delete(self, request: BatchDeleteEcoExamPaperRequest, option: RequestOption | None = None) -> BatchDeleteEcoExamPaperResponse: ...
+    def batch_update(self, request: BatchUpdateEcoExamPaperRequest, option: RequestOption | None = None) -> BatchUpdateEcoExamPaperResponse: ...
+    async def abatch_update(self, request: BatchUpdateEcoExamPaperRequest, option: RequestOption | None = None) -> BatchUpdateEcoExamPaperResponse: ...
+    def create(self, request: CreateEcoExamPaperRequest, option: RequestOption | None = None) -> CreateEcoExamPaperResponse: ...
+    async def acreate(self, request: CreateEcoExamPaperRequest, option: RequestOption | None = None) -> CreateEcoExamPaperResponse: ...

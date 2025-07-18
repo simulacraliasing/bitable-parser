@@ -1,0 +1,23 @@
+from ..model.batch_delete_calendar_event_attendee_request import BatchDeleteCalendarEventAttendeeRequest as BatchDeleteCalendarEventAttendeeRequest
+from ..model.batch_delete_calendar_event_attendee_response import BatchDeleteCalendarEventAttendeeResponse as BatchDeleteCalendarEventAttendeeResponse
+from ..model.create_calendar_event_attendee_request import CreateCalendarEventAttendeeRequest as CreateCalendarEventAttendeeRequest
+from ..model.create_calendar_event_attendee_response import CreateCalendarEventAttendeeResponse as CreateCalendarEventAttendeeResponse
+from ..model.list_calendar_event_attendee_request import ListCalendarEventAttendeeRequest as ListCalendarEventAttendeeRequest
+from ..model.list_calendar_event_attendee_response import ListCalendarEventAttendeeResponse as ListCalendarEventAttendeeResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class CalendarEventAttendee:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_delete(self, request: BatchDeleteCalendarEventAttendeeRequest, option: RequestOption | None = None) -> BatchDeleteCalendarEventAttendeeResponse: ...
+    async def abatch_delete(self, request: BatchDeleteCalendarEventAttendeeRequest, option: RequestOption | None = None) -> BatchDeleteCalendarEventAttendeeResponse: ...
+    def create(self, request: CreateCalendarEventAttendeeRequest, option: RequestOption | None = None) -> CreateCalendarEventAttendeeResponse: ...
+    async def acreate(self, request: CreateCalendarEventAttendeeRequest, option: RequestOption | None = None) -> CreateCalendarEventAttendeeResponse: ...
+    def list(self, request: ListCalendarEventAttendeeRequest, option: RequestOption | None = None) -> ListCalendarEventAttendeeResponse: ...
+    async def alist(self, request: ListCalendarEventAttendeeRequest, option: RequestOption | None = None) -> ListCalendarEventAttendeeResponse: ...

@@ -1,0 +1,10 @@
+from lark_oapi.core.construct import init as init
+from lark_oapi.event.context import EventContext as EventContext
+
+class P2CorehrPersonDeletedV1Data:
+    person_id: str | None
+    def __init__(self, d=None) -> None: ...
+
+class P2CorehrPersonDeletedV1(EventContext):
+    event: P2CorehrPersonDeletedV1Data | None
+    def __init__(self, d=None) -> None: ...

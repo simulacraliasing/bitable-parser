@@ -1,0 +1,23 @@
+from ..model.create_data_source_item_request import CreateDataSourceItemRequest as CreateDataSourceItemRequest
+from ..model.create_data_source_item_response import CreateDataSourceItemResponse as CreateDataSourceItemResponse
+from ..model.delete_data_source_item_request import DeleteDataSourceItemRequest as DeleteDataSourceItemRequest
+from ..model.delete_data_source_item_response import DeleteDataSourceItemResponse as DeleteDataSourceItemResponse
+from ..model.get_data_source_item_request import GetDataSourceItemRequest as GetDataSourceItemRequest
+from ..model.get_data_source_item_response import GetDataSourceItemResponse as GetDataSourceItemResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class DataSourceItem:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateDataSourceItemRequest, option: RequestOption | None = None) -> CreateDataSourceItemResponse: ...
+    async def acreate(self, request: CreateDataSourceItemRequest, option: RequestOption | None = None) -> CreateDataSourceItemResponse: ...
+    def delete(self, request: DeleteDataSourceItemRequest, option: RequestOption | None = None) -> DeleteDataSourceItemResponse: ...
+    async def adelete(self, request: DeleteDataSourceItemRequest, option: RequestOption | None = None) -> DeleteDataSourceItemResponse: ...
+    def get(self, request: GetDataSourceItemRequest, option: RequestOption | None = None) -> GetDataSourceItemResponse: ...
+    async def aget(self, request: GetDataSourceItemRequest, option: RequestOption | None = None) -> GetDataSourceItemResponse: ...

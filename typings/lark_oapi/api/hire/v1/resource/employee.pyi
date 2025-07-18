@@ -1,0 +1,23 @@
+from ..model.get_by_application_employee_request import GetByApplicationEmployeeRequest as GetByApplicationEmployeeRequest
+from ..model.get_by_application_employee_response import GetByApplicationEmployeeResponse as GetByApplicationEmployeeResponse
+from ..model.get_employee_request import GetEmployeeRequest as GetEmployeeRequest
+from ..model.get_employee_response import GetEmployeeResponse as GetEmployeeResponse
+from ..model.patch_employee_request import PatchEmployeeRequest as PatchEmployeeRequest
+from ..model.patch_employee_response import PatchEmployeeResponse as PatchEmployeeResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Employee:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def get(self, request: GetEmployeeRequest, option: RequestOption | None = None) -> GetEmployeeResponse: ...
+    async def aget(self, request: GetEmployeeRequest, option: RequestOption | None = None) -> GetEmployeeResponse: ...
+    def get_by_application(self, request: GetByApplicationEmployeeRequest, option: RequestOption | None = None) -> GetByApplicationEmployeeResponse: ...
+    async def aget_by_application(self, request: GetByApplicationEmployeeRequest, option: RequestOption | None = None) -> GetByApplicationEmployeeResponse: ...
+    def patch(self, request: PatchEmployeeRequest, option: RequestOption | None = None) -> PatchEmployeeResponse: ...
+    async def apatch(self, request: PatchEmployeeRequest, option: RequestOption | None = None) -> PatchEmployeeResponse: ...

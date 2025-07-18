@@ -1,0 +1,23 @@
+from ..model.create_employment_request import CreateEmploymentRequest as CreateEmploymentRequest
+from ..model.create_employment_response import CreateEmploymentResponse as CreateEmploymentResponse
+from ..model.delete_employment_request import DeleteEmploymentRequest as DeleteEmploymentRequest
+from ..model.delete_employment_response import DeleteEmploymentResponse as DeleteEmploymentResponse
+from ..model.patch_employment_request import PatchEmploymentRequest as PatchEmploymentRequest
+from ..model.patch_employment_response import PatchEmploymentResponse as PatchEmploymentResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Employment:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateEmploymentRequest, option: RequestOption | None = None) -> CreateEmploymentResponse: ...
+    async def acreate(self, request: CreateEmploymentRequest, option: RequestOption | None = None) -> CreateEmploymentResponse: ...
+    def delete(self, request: DeleteEmploymentRequest, option: RequestOption | None = None) -> DeleteEmploymentResponse: ...
+    async def adelete(self, request: DeleteEmploymentRequest, option: RequestOption | None = None) -> DeleteEmploymentResponse: ...
+    def patch(self, request: PatchEmploymentRequest, option: RequestOption | None = None) -> PatchEmploymentResponse: ...
+    async def apatch(self, request: PatchEmploymentRequest, option: RequestOption | None = None) -> PatchEmploymentResponse: ...

@@ -1,0 +1,23 @@
+from ..model.create_aily_session_aily_message_request import CreateAilySessionAilyMessageRequest as CreateAilySessionAilyMessageRequest
+from ..model.create_aily_session_aily_message_response import CreateAilySessionAilyMessageResponse as CreateAilySessionAilyMessageResponse
+from ..model.get_aily_session_aily_message_request import GetAilySessionAilyMessageRequest as GetAilySessionAilyMessageRequest
+from ..model.get_aily_session_aily_message_response import GetAilySessionAilyMessageResponse as GetAilySessionAilyMessageResponse
+from ..model.list_aily_session_aily_message_request import ListAilySessionAilyMessageRequest as ListAilySessionAilyMessageRequest
+from ..model.list_aily_session_aily_message_response import ListAilySessionAilyMessageResponse as ListAilySessionAilyMessageResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class AilySessionAilyMessage:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateAilySessionAilyMessageRequest, option: RequestOption | None = None) -> CreateAilySessionAilyMessageResponse: ...
+    async def acreate(self, request: CreateAilySessionAilyMessageRequest, option: RequestOption | None = None) -> CreateAilySessionAilyMessageResponse: ...
+    def get(self, request: GetAilySessionAilyMessageRequest, option: RequestOption | None = None) -> GetAilySessionAilyMessageResponse: ...
+    async def aget(self, request: GetAilySessionAilyMessageRequest, option: RequestOption | None = None) -> GetAilySessionAilyMessageResponse: ...
+    def list(self, request: ListAilySessionAilyMessageRequest, option: RequestOption | None = None) -> ListAilySessionAilyMessageResponse: ...
+    async def alist(self, request: ListAilySessionAilyMessageRequest, option: RequestOption | None = None) -> ListAilySessionAilyMessageResponse: ...

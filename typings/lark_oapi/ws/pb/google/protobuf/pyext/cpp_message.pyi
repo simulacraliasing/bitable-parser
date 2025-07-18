@@ -1,0 +1,3 @@
+from lark_oapi.ws.pb.google.protobuf.pyext import _message
+
+class GeneratedProtocolMessageType(_message.MessageMeta): ...

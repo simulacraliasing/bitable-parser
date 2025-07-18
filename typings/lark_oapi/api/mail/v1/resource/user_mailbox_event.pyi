@@ -1,0 +1,23 @@
+from ..model.subscribe_user_mailbox_event_request import SubscribeUserMailboxEventRequest as SubscribeUserMailboxEventRequest
+from ..model.subscribe_user_mailbox_event_response import SubscribeUserMailboxEventResponse as SubscribeUserMailboxEventResponse
+from ..model.subscription_user_mailbox_event_request import SubscriptionUserMailboxEventRequest as SubscriptionUserMailboxEventRequest
+from ..model.subscription_user_mailbox_event_response import SubscriptionUserMailboxEventResponse as SubscriptionUserMailboxEventResponse
+from ..model.unsubscribe_user_mailbox_event_request import UnsubscribeUserMailboxEventRequest as UnsubscribeUserMailboxEventRequest
+from ..model.unsubscribe_user_mailbox_event_response import UnsubscribeUserMailboxEventResponse as UnsubscribeUserMailboxEventResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class UserMailboxEvent:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def subscribe(self, request: SubscribeUserMailboxEventRequest, option: RequestOption | None = None) -> SubscribeUserMailboxEventResponse: ...
+    async def asubscribe(self, request: SubscribeUserMailboxEventRequest, option: RequestOption | None = None) -> SubscribeUserMailboxEventResponse: ...
+    def subscription(self, request: SubscriptionUserMailboxEventRequest, option: RequestOption | None = None) -> SubscriptionUserMailboxEventResponse: ...
+    async def asubscription(self, request: SubscriptionUserMailboxEventRequest, option: RequestOption | None = None) -> SubscriptionUserMailboxEventResponse: ...
+    def unsubscribe(self, request: UnsubscribeUserMailboxEventRequest, option: RequestOption | None = None) -> UnsubscribeUserMailboxEventResponse: ...
+    async def aunsubscribe(self, request: UnsubscribeUserMailboxEventRequest, option: RequestOption | None = None) -> UnsubscribeUserMailboxEventResponse: ...

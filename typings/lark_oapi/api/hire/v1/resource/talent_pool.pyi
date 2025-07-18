@@ -1,0 +1,23 @@
+from ..model.batch_change_talent_pool_talent_pool_request import BatchChangeTalentPoolTalentPoolRequest as BatchChangeTalentPoolTalentPoolRequest
+from ..model.batch_change_talent_pool_talent_pool_response import BatchChangeTalentPoolTalentPoolResponse as BatchChangeTalentPoolTalentPoolResponse
+from ..model.move_talent_talent_pool_request import MoveTalentTalentPoolRequest as MoveTalentTalentPoolRequest
+from ..model.move_talent_talent_pool_response import MoveTalentTalentPoolResponse as MoveTalentTalentPoolResponse
+from ..model.search_talent_pool_request import SearchTalentPoolRequest as SearchTalentPoolRequest
+from ..model.search_talent_pool_response import SearchTalentPoolResponse as SearchTalentPoolResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class TalentPool:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_change_talent_pool(self, request: BatchChangeTalentPoolTalentPoolRequest, option: RequestOption | None = None) -> BatchChangeTalentPoolTalentPoolResponse: ...
+    async def abatch_change_talent_pool(self, request: BatchChangeTalentPoolTalentPoolRequest, option: RequestOption | None = None) -> BatchChangeTalentPoolTalentPoolResponse: ...
+    def move_talent(self, request: MoveTalentTalentPoolRequest, option: RequestOption | None = None) -> MoveTalentTalentPoolResponse: ...
+    async def amove_talent(self, request: MoveTalentTalentPoolRequest, option: RequestOption | None = None) -> MoveTalentTalentPoolResponse: ...
+    def search(self, request: SearchTalentPoolRequest, option: RequestOption | None = None) -> SearchTalentPoolResponse: ...
+    async def asearch(self, request: SearchTalentPoolRequest, option: RequestOption | None = None) -> SearchTalentPoolResponse: ...

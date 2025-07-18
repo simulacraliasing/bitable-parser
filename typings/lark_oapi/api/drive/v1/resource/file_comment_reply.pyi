@@ -1,0 +1,23 @@
+from ..model.delete_file_comment_reply_request import DeleteFileCommentReplyRequest as DeleteFileCommentReplyRequest
+from ..model.delete_file_comment_reply_response import DeleteFileCommentReplyResponse as DeleteFileCommentReplyResponse
+from ..model.list_file_comment_reply_request import ListFileCommentReplyRequest as ListFileCommentReplyRequest
+from ..model.list_file_comment_reply_response import ListFileCommentReplyResponse as ListFileCommentReplyResponse
+from ..model.update_file_comment_reply_request import UpdateFileCommentReplyRequest as UpdateFileCommentReplyRequest
+from ..model.update_file_comment_reply_response import UpdateFileCommentReplyResponse as UpdateFileCommentReplyResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class FileCommentReply:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def delete(self, request: DeleteFileCommentReplyRequest, option: RequestOption | None = None) -> DeleteFileCommentReplyResponse: ...
+    async def adelete(self, request: DeleteFileCommentReplyRequest, option: RequestOption | None = None) -> DeleteFileCommentReplyResponse: ...
+    def list(self, request: ListFileCommentReplyRequest, option: RequestOption | None = None) -> ListFileCommentReplyResponse: ...
+    async def alist(self, request: ListFileCommentReplyRequest, option: RequestOption | None = None) -> ListFileCommentReplyResponse: ...
+    def update(self, request: UpdateFileCommentReplyRequest, option: RequestOption | None = None) -> UpdateFileCommentReplyResponse: ...
+    async def aupdate(self, request: UpdateFileCommentReplyRequest, option: RequestOption | None = None) -> UpdateFileCommentReplyResponse: ...

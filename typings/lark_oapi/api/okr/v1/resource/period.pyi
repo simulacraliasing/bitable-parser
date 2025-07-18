@@ -1,0 +1,23 @@
+from ..model.create_period_request import CreatePeriodRequest as CreatePeriodRequest
+from ..model.create_period_response import CreatePeriodResponse as CreatePeriodResponse
+from ..model.list_period_request import ListPeriodRequest as ListPeriodRequest
+from ..model.list_period_response import ListPeriodResponse as ListPeriodResponse
+from ..model.patch_period_request import PatchPeriodRequest as PatchPeriodRequest
+from ..model.patch_period_response import PatchPeriodResponse as PatchPeriodResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Period:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreatePeriodRequest, option: RequestOption | None = None) -> CreatePeriodResponse: ...
+    async def acreate(self, request: CreatePeriodRequest, option: RequestOption | None = None) -> CreatePeriodResponse: ...
+    def list(self, request: ListPeriodRequest, option: RequestOption | None = None) -> ListPeriodResponse: ...
+    async def alist(self, request: ListPeriodRequest, option: RequestOption | None = None) -> ListPeriodResponse: ...
+    def patch(self, request: PatchPeriodRequest, option: RequestOption | None = None) -> PatchPeriodResponse: ...
+    async def apatch(self, request: PatchPeriodRequest, option: RequestOption | None = None) -> PatchPeriodResponse: ...

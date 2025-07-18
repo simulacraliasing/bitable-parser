@@ -1,0 +1,23 @@
+from ..model.delete_batch_message_request import DeleteBatchMessageRequest as DeleteBatchMessageRequest
+from ..model.delete_batch_message_response import DeleteBatchMessageResponse as DeleteBatchMessageResponse
+from ..model.get_progress_batch_message_request import GetProgressBatchMessageRequest as GetProgressBatchMessageRequest
+from ..model.get_progress_batch_message_response import GetProgressBatchMessageResponse as GetProgressBatchMessageResponse
+from ..model.read_user_batch_message_request import ReadUserBatchMessageRequest as ReadUserBatchMessageRequest
+from ..model.read_user_batch_message_response import ReadUserBatchMessageResponse as ReadUserBatchMessageResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class BatchMessage:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def delete(self, request: DeleteBatchMessageRequest, option: RequestOption | None = None) -> DeleteBatchMessageResponse: ...
+    async def adelete(self, request: DeleteBatchMessageRequest, option: RequestOption | None = None) -> DeleteBatchMessageResponse: ...
+    def get_progress(self, request: GetProgressBatchMessageRequest, option: RequestOption | None = None) -> GetProgressBatchMessageResponse: ...
+    async def aget_progress(self, request: GetProgressBatchMessageRequest, option: RequestOption | None = None) -> GetProgressBatchMessageResponse: ...
+    def read_user(self, request: ReadUserBatchMessageRequest, option: RequestOption | None = None) -> ReadUserBatchMessageResponse: ...
+    async def aread_user(self, request: ReadUserBatchMessageRequest, option: RequestOption | None = None) -> ReadUserBatchMessageResponse: ...

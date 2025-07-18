@@ -1,0 +1,23 @@
+from ..model.batch_get_employee_request import BatchGetEmployeeRequest as BatchGetEmployeeRequest
+from ..model.batch_get_employee_response import BatchGetEmployeeResponse as BatchGetEmployeeResponse
+from ..model.create_employee_request import CreateEmployeeRequest as CreateEmployeeRequest
+from ..model.create_employee_response import CreateEmployeeResponse as CreateEmployeeResponse
+from ..model.search_employee_request import SearchEmployeeRequest as SearchEmployeeRequest
+from ..model.search_employee_response import SearchEmployeeResponse as SearchEmployeeResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Employee:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_get(self, request: BatchGetEmployeeRequest, option: RequestOption | None = None) -> BatchGetEmployeeResponse: ...
+    async def abatch_get(self, request: BatchGetEmployeeRequest, option: RequestOption | None = None) -> BatchGetEmployeeResponse: ...
+    def create(self, request: CreateEmployeeRequest, option: RequestOption | None = None) -> CreateEmployeeResponse: ...
+    async def acreate(self, request: CreateEmployeeRequest, option: RequestOption | None = None) -> CreateEmployeeResponse: ...
+    def search(self, request: SearchEmployeeRequest, option: RequestOption | None = None) -> SearchEmployeeResponse: ...
+    async def asearch(self, request: SearchEmployeeRequest, option: RequestOption | None = None) -> SearchEmployeeResponse: ...

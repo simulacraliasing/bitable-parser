@@ -1,0 +1,23 @@
+from ..model.create_functional_role_request import CreateFunctionalRoleRequest as CreateFunctionalRoleRequest
+from ..model.create_functional_role_response import CreateFunctionalRoleResponse as CreateFunctionalRoleResponse
+from ..model.delete_functional_role_request import DeleteFunctionalRoleRequest as DeleteFunctionalRoleRequest
+from ..model.delete_functional_role_response import DeleteFunctionalRoleResponse as DeleteFunctionalRoleResponse
+from ..model.update_functional_role_request import UpdateFunctionalRoleRequest as UpdateFunctionalRoleRequest
+from ..model.update_functional_role_response import UpdateFunctionalRoleResponse as UpdateFunctionalRoleResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class FunctionalRole:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateFunctionalRoleRequest, option: RequestOption | None = None) -> CreateFunctionalRoleResponse: ...
+    async def acreate(self, request: CreateFunctionalRoleRequest, option: RequestOption | None = None) -> CreateFunctionalRoleResponse: ...
+    def delete(self, request: DeleteFunctionalRoleRequest, option: RequestOption | None = None) -> DeleteFunctionalRoleResponse: ...
+    async def adelete(self, request: DeleteFunctionalRoleRequest, option: RequestOption | None = None) -> DeleteFunctionalRoleResponse: ...
+    def update(self, request: UpdateFunctionalRoleRequest, option: RequestOption | None = None) -> UpdateFunctionalRoleResponse: ...
+    async def aupdate(self, request: UpdateFunctionalRoleRequest, option: RequestOption | None = None) -> UpdateFunctionalRoleResponse: ...

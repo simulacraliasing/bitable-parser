@@ -1,0 +1,7 @@
+from .query_task_response_body import QueryTaskResponseBody as QueryTaskResponseBody
+from lark_oapi.core.construct import init as init
+from lark_oapi.core.model import BaseResponse as BaseResponse
+
+class QueryTaskResponse(BaseResponse):
+    data: QueryTaskResponseBody | None
+    def __init__(self, d=None) -> None: ...

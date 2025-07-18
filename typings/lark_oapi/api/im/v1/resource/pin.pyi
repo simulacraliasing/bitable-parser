@@ -1,0 +1,23 @@
+from ..model.create_pin_request import CreatePinRequest as CreatePinRequest
+from ..model.create_pin_response import CreatePinResponse as CreatePinResponse
+from ..model.delete_pin_request import DeletePinRequest as DeletePinRequest
+from ..model.delete_pin_response import DeletePinResponse as DeletePinResponse
+from ..model.list_pin_request import ListPinRequest as ListPinRequest
+from ..model.list_pin_response import ListPinResponse as ListPinResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class Pin:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreatePinRequest, option: RequestOption | None = None) -> CreatePinResponse: ...
+    async def acreate(self, request: CreatePinRequest, option: RequestOption | None = None) -> CreatePinResponse: ...
+    def delete(self, request: DeletePinRequest, option: RequestOption | None = None) -> DeletePinResponse: ...
+    async def adelete(self, request: DeletePinRequest, option: RequestOption | None = None) -> DeletePinResponse: ...
+    def list(self, request: ListPinRequest, option: RequestOption | None = None) -> ListPinResponse: ...
+    async def alist(self, request: ListPinRequest, option: RequestOption | None = None) -> ListPinResponse: ...

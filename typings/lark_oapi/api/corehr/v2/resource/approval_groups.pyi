@@ -1,0 +1,23 @@
+from ..model.get_approval_groups_request import GetApprovalGroupsRequest as GetApprovalGroupsRequest
+from ..model.get_approval_groups_response import GetApprovalGroupsResponse as GetApprovalGroupsResponse
+from ..model.open_query_department_change_list_by_ids_approval_groups_request import OpenQueryDepartmentChangeListByIdsApprovalGroupsRequest as OpenQueryDepartmentChangeListByIdsApprovalGroupsRequest
+from ..model.open_query_department_change_list_by_ids_approval_groups_response import OpenQueryDepartmentChangeListByIdsApprovalGroupsResponse as OpenQueryDepartmentChangeListByIdsApprovalGroupsResponse
+from ..model.open_query_job_change_list_by_ids_approval_groups_request import OpenQueryJobChangeListByIdsApprovalGroupsRequest as OpenQueryJobChangeListByIdsApprovalGroupsRequest
+from ..model.open_query_job_change_list_by_ids_approval_groups_response import OpenQueryJobChangeListByIdsApprovalGroupsResponse as OpenQueryJobChangeListByIdsApprovalGroupsResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ApprovalGroups:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def get(self, request: GetApprovalGroupsRequest, option: RequestOption | None = None) -> GetApprovalGroupsResponse: ...
+    async def aget(self, request: GetApprovalGroupsRequest, option: RequestOption | None = None) -> GetApprovalGroupsResponse: ...
+    def open_query_department_change_list_by_ids(self, request: OpenQueryDepartmentChangeListByIdsApprovalGroupsRequest, option: RequestOption | None = None) -> OpenQueryDepartmentChangeListByIdsApprovalGroupsResponse: ...
+    async def aopen_query_department_change_list_by_ids(self, request: OpenQueryDepartmentChangeListByIdsApprovalGroupsRequest, option: RequestOption | None = None) -> OpenQueryDepartmentChangeListByIdsApprovalGroupsResponse: ...
+    def open_query_job_change_list_by_ids(self, request: OpenQueryJobChangeListByIdsApprovalGroupsRequest, option: RequestOption | None = None) -> OpenQueryJobChangeListByIdsApprovalGroupsResponse: ...
+    async def aopen_query_job_change_list_by_ids(self, request: OpenQueryJobChangeListByIdsApprovalGroupsRequest, option: RequestOption | None = None) -> OpenQueryJobChangeListByIdsApprovalGroupsResponse: ...

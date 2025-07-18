@@ -1,0 +1,23 @@
+from ..model.create_location_address_request import CreateLocationAddressRequest as CreateLocationAddressRequest
+from ..model.create_location_address_response import CreateLocationAddressResponse as CreateLocationAddressResponse
+from ..model.delete_location_address_request import DeleteLocationAddressRequest as DeleteLocationAddressRequest
+from ..model.delete_location_address_response import DeleteLocationAddressResponse as DeleteLocationAddressResponse
+from ..model.patch_location_address_request import PatchLocationAddressRequest as PatchLocationAddressRequest
+from ..model.patch_location_address_response import PatchLocationAddressResponse as PatchLocationAddressResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class LocationAddress:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateLocationAddressRequest, option: RequestOption | None = None) -> CreateLocationAddressResponse: ...
+    async def acreate(self, request: CreateLocationAddressRequest, option: RequestOption | None = None) -> CreateLocationAddressResponse: ...
+    def delete(self, request: DeleteLocationAddressRequest, option: RequestOption | None = None) -> DeleteLocationAddressResponse: ...
+    async def adelete(self, request: DeleteLocationAddressRequest, option: RequestOption | None = None) -> DeleteLocationAddressResponse: ...
+    def patch(self, request: PatchLocationAddressRequest, option: RequestOption | None = None) -> PatchLocationAddressResponse: ...
+    async def apatch(self, request: PatchLocationAddressRequest, option: RequestOption | None = None) -> PatchLocationAddressResponse: ...

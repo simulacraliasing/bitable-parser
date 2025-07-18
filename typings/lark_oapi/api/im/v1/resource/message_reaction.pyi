@@ -1,0 +1,23 @@
+from ..model.create_message_reaction_request import CreateMessageReactionRequest as CreateMessageReactionRequest
+from ..model.create_message_reaction_response import CreateMessageReactionResponse as CreateMessageReactionResponse
+from ..model.delete_message_reaction_request import DeleteMessageReactionRequest as DeleteMessageReactionRequest
+from ..model.delete_message_reaction_response import DeleteMessageReactionResponse as DeleteMessageReactionResponse
+from ..model.list_message_reaction_request import ListMessageReactionRequest as ListMessageReactionRequest
+from ..model.list_message_reaction_response import ListMessageReactionResponse as ListMessageReactionResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class MessageReaction:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateMessageReactionRequest, option: RequestOption | None = None) -> CreateMessageReactionResponse: ...
+    async def acreate(self, request: CreateMessageReactionRequest, option: RequestOption | None = None) -> CreateMessageReactionResponse: ...
+    def delete(self, request: DeleteMessageReactionRequest, option: RequestOption | None = None) -> DeleteMessageReactionResponse: ...
+    async def adelete(self, request: DeleteMessageReactionRequest, option: RequestOption | None = None) -> DeleteMessageReactionResponse: ...
+    def list(self, request: ListMessageReactionRequest, option: RequestOption | None = None) -> ListMessageReactionResponse: ...
+    async def alist(self, request: ListMessageReactionRequest, option: RequestOption | None = None) -> ListMessageReactionResponse: ...

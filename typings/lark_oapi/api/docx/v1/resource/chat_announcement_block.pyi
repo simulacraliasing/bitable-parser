@@ -1,0 +1,23 @@
+from ..model.batch_update_chat_announcement_block_request import BatchUpdateChatAnnouncementBlockRequest as BatchUpdateChatAnnouncementBlockRequest
+from ..model.batch_update_chat_announcement_block_response import BatchUpdateChatAnnouncementBlockResponse as BatchUpdateChatAnnouncementBlockResponse
+from ..model.get_chat_announcement_block_request import GetChatAnnouncementBlockRequest as GetChatAnnouncementBlockRequest
+from ..model.get_chat_announcement_block_response import GetChatAnnouncementBlockResponse as GetChatAnnouncementBlockResponse
+from ..model.list_chat_announcement_block_request import ListChatAnnouncementBlockRequest as ListChatAnnouncementBlockRequest
+from ..model.list_chat_announcement_block_response import ListChatAnnouncementBlockResponse as ListChatAnnouncementBlockResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ChatAnnouncementBlock:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_update(self, request: BatchUpdateChatAnnouncementBlockRequest, option: RequestOption | None = None) -> BatchUpdateChatAnnouncementBlockResponse: ...
+    async def abatch_update(self, request: BatchUpdateChatAnnouncementBlockRequest, option: RequestOption | None = None) -> BatchUpdateChatAnnouncementBlockResponse: ...
+    def get(self, request: GetChatAnnouncementBlockRequest, option: RequestOption | None = None) -> GetChatAnnouncementBlockResponse: ...
+    async def aget(self, request: GetChatAnnouncementBlockRequest, option: RequestOption | None = None) -> GetChatAnnouncementBlockResponse: ...
+    def list(self, request: ListChatAnnouncementBlockRequest, option: RequestOption | None = None) -> ListChatAnnouncementBlockResponse: ...
+    async def alist(self, request: ListChatAnnouncementBlockRequest, option: RequestOption | None = None) -> ListChatAnnouncementBlockResponse: ...

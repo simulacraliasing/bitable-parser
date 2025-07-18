@@ -1,0 +1,23 @@
+from ..model.create_task_reminder_request import CreateTaskReminderRequest as CreateTaskReminderRequest
+from ..model.create_task_reminder_response import CreateTaskReminderResponse as CreateTaskReminderResponse
+from ..model.delete_task_reminder_request import DeleteTaskReminderRequest as DeleteTaskReminderRequest
+from ..model.delete_task_reminder_response import DeleteTaskReminderResponse as DeleteTaskReminderResponse
+from ..model.list_task_reminder_request import ListTaskReminderRequest as ListTaskReminderRequest
+from ..model.list_task_reminder_response import ListTaskReminderResponse as ListTaskReminderResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class TaskReminder:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateTaskReminderRequest, option: RequestOption | None = None) -> CreateTaskReminderResponse: ...
+    async def acreate(self, request: CreateTaskReminderRequest, option: RequestOption | None = None) -> CreateTaskReminderResponse: ...
+    def delete(self, request: DeleteTaskReminderRequest, option: RequestOption | None = None) -> DeleteTaskReminderResponse: ...
+    async def adelete(self, request: DeleteTaskReminderRequest, option: RequestOption | None = None) -> DeleteTaskReminderResponse: ...
+    def list(self, request: ListTaskReminderRequest, option: RequestOption | None = None) -> ListTaskReminderResponse: ...
+    async def alist(self, request: ListTaskReminderRequest, option: RequestOption | None = None) -> ListTaskReminderResponse: ...

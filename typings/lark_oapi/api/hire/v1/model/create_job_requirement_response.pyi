@@ -1,0 +1,7 @@
+from .create_job_requirement_response_body import CreateJobRequirementResponseBody as CreateJobRequirementResponseBody
+from lark_oapi.core.construct import init as init
+from lark_oapi.core.model import BaseResponse as BaseResponse
+
+class CreateJobRequirementResponse(BaseResponse):
+    data: CreateJobRequirementResponseBody | None
+    def __init__(self, d=None) -> None: ...

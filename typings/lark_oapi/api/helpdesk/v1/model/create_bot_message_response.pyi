@@ -1,0 +1,7 @@
+from .create_bot_message_response_body import CreateBotMessageResponseBody as CreateBotMessageResponseBody
+from lark_oapi.core.construct import init as init
+from lark_oapi.core.model import BaseResponse as BaseResponse
+
+class CreateBotMessageResponse(BaseResponse):
+    data: CreateBotMessageResponseBody | None
+    def __init__(self, d=None) -> None: ...

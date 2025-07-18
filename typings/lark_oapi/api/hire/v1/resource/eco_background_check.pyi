@@ -1,0 +1,23 @@
+from ..model.cancel_eco_background_check_request import CancelEcoBackgroundCheckRequest as CancelEcoBackgroundCheckRequest
+from ..model.cancel_eco_background_check_response import CancelEcoBackgroundCheckResponse as CancelEcoBackgroundCheckResponse
+from ..model.update_progress_eco_background_check_request import UpdateProgressEcoBackgroundCheckRequest as UpdateProgressEcoBackgroundCheckRequest
+from ..model.update_progress_eco_background_check_response import UpdateProgressEcoBackgroundCheckResponse as UpdateProgressEcoBackgroundCheckResponse
+from ..model.update_result_eco_background_check_request import UpdateResultEcoBackgroundCheckRequest as UpdateResultEcoBackgroundCheckRequest
+from ..model.update_result_eco_background_check_response import UpdateResultEcoBackgroundCheckResponse as UpdateResultEcoBackgroundCheckResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class EcoBackgroundCheck:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def cancel(self, request: CancelEcoBackgroundCheckRequest, option: RequestOption | None = None) -> CancelEcoBackgroundCheckResponse: ...
+    async def acancel(self, request: CancelEcoBackgroundCheckRequest, option: RequestOption | None = None) -> CancelEcoBackgroundCheckResponse: ...
+    def update_progress(self, request: UpdateProgressEcoBackgroundCheckRequest, option: RequestOption | None = None) -> UpdateProgressEcoBackgroundCheckResponse: ...
+    async def aupdate_progress(self, request: UpdateProgressEcoBackgroundCheckRequest, option: RequestOption | None = None) -> UpdateProgressEcoBackgroundCheckResponse: ...
+    def update_result(self, request: UpdateResultEcoBackgroundCheckRequest, option: RequestOption | None = None) -> UpdateResultEcoBackgroundCheckResponse: ...
+    async def aupdate_result(self, request: UpdateResultEcoBackgroundCheckRequest, option: RequestOption | None = None) -> UpdateResultEcoBackgroundCheckResponse: ...

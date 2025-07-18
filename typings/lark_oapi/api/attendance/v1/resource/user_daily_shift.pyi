@@ -1,0 +1,23 @@
+from ..model.batch_create_temp_user_daily_shift_request import BatchCreateTempUserDailyShiftRequest as BatchCreateTempUserDailyShiftRequest
+from ..model.batch_create_temp_user_daily_shift_response import BatchCreateTempUserDailyShiftResponse as BatchCreateTempUserDailyShiftResponse
+from ..model.batch_create_user_daily_shift_request import BatchCreateUserDailyShiftRequest as BatchCreateUserDailyShiftRequest
+from ..model.batch_create_user_daily_shift_response import BatchCreateUserDailyShiftResponse as BatchCreateUserDailyShiftResponse
+from ..model.query_user_daily_shift_request import QueryUserDailyShiftRequest as QueryUserDailyShiftRequest
+from ..model.query_user_daily_shift_response import QueryUserDailyShiftResponse as QueryUserDailyShiftResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class UserDailyShift:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def batch_create(self, request: BatchCreateUserDailyShiftRequest, option: RequestOption | None = None) -> BatchCreateUserDailyShiftResponse: ...
+    async def abatch_create(self, request: BatchCreateUserDailyShiftRequest, option: RequestOption | None = None) -> BatchCreateUserDailyShiftResponse: ...
+    def batch_create_temp(self, request: BatchCreateTempUserDailyShiftRequest, option: RequestOption | None = None) -> BatchCreateTempUserDailyShiftResponse: ...
+    async def abatch_create_temp(self, request: BatchCreateTempUserDailyShiftRequest, option: RequestOption | None = None) -> BatchCreateTempUserDailyShiftResponse: ...
+    def query(self, request: QueryUserDailyShiftRequest, option: RequestOption | None = None) -> QueryUserDailyShiftResponse: ...
+    async def aquery(self, request: QueryUserDailyShiftRequest, option: RequestOption | None = None) -> QueryUserDailyShiftResponse: ...

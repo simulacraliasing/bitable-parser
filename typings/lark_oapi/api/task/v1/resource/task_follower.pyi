@@ -1,0 +1,23 @@
+from ..model.create_task_follower_request import CreateTaskFollowerRequest as CreateTaskFollowerRequest
+from ..model.create_task_follower_response import CreateTaskFollowerResponse as CreateTaskFollowerResponse
+from ..model.delete_task_follower_request import DeleteTaskFollowerRequest as DeleteTaskFollowerRequest
+from ..model.delete_task_follower_response import DeleteTaskFollowerResponse as DeleteTaskFollowerResponse
+from ..model.list_task_follower_request import ListTaskFollowerRequest as ListTaskFollowerRequest
+from ..model.list_task_follower_response import ListTaskFollowerResponse as ListTaskFollowerResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class TaskFollower:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateTaskFollowerRequest, option: RequestOption | None = None) -> CreateTaskFollowerResponse: ...
+    async def acreate(self, request: CreateTaskFollowerRequest, option: RequestOption | None = None) -> CreateTaskFollowerResponse: ...
+    def delete(self, request: DeleteTaskFollowerRequest, option: RequestOption | None = None) -> DeleteTaskFollowerResponse: ...
+    async def adelete(self, request: DeleteTaskFollowerRequest, option: RequestOption | None = None) -> DeleteTaskFollowerResponse: ...
+    def list(self, request: ListTaskFollowerRequest, option: RequestOption | None = None) -> ListTaskFollowerResponse: ...
+    async def alist(self, request: ListTaskFollowerRequest, option: RequestOption | None = None) -> ListTaskFollowerResponse: ...

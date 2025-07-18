@@ -1,0 +1,23 @@
+from ..model.create_public_mailbox_alias_request import CreatePublicMailboxAliasRequest as CreatePublicMailboxAliasRequest
+from ..model.create_public_mailbox_alias_response import CreatePublicMailboxAliasResponse as CreatePublicMailboxAliasResponse
+from ..model.delete_public_mailbox_alias_request import DeletePublicMailboxAliasRequest as DeletePublicMailboxAliasRequest
+from ..model.delete_public_mailbox_alias_response import DeletePublicMailboxAliasResponse as DeletePublicMailboxAliasResponse
+from ..model.list_public_mailbox_alias_request import ListPublicMailboxAliasRequest as ListPublicMailboxAliasRequest
+from ..model.list_public_mailbox_alias_response import ListPublicMailboxAliasResponse as ListPublicMailboxAliasResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class PublicMailboxAlias:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreatePublicMailboxAliasRequest, option: RequestOption | None = None) -> CreatePublicMailboxAliasResponse: ...
+    async def acreate(self, request: CreatePublicMailboxAliasRequest, option: RequestOption | None = None) -> CreatePublicMailboxAliasResponse: ...
+    def delete(self, request: DeletePublicMailboxAliasRequest, option: RequestOption | None = None) -> DeletePublicMailboxAliasResponse: ...
+    async def adelete(self, request: DeletePublicMailboxAliasRequest, option: RequestOption | None = None) -> DeletePublicMailboxAliasResponse: ...
+    def list(self, request: ListPublicMailboxAliasRequest, option: RequestOption | None = None) -> ListPublicMailboxAliasResponse: ...
+    async def alist(self, request: ListPublicMailboxAliasRequest, option: RequestOption | None = None) -> ListPublicMailboxAliasResponse: ...

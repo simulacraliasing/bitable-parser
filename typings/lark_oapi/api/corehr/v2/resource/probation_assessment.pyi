@@ -1,0 +1,23 @@
+from ..model.create_probation_assessment_request import CreateProbationAssessmentRequest as CreateProbationAssessmentRequest
+from ..model.create_probation_assessment_response import CreateProbationAssessmentResponse as CreateProbationAssessmentResponse
+from ..model.delete_probation_assessment_request import DeleteProbationAssessmentRequest as DeleteProbationAssessmentRequest
+from ..model.delete_probation_assessment_response import DeleteProbationAssessmentResponse as DeleteProbationAssessmentResponse
+from ..model.patch_probation_assessment_request import PatchProbationAssessmentRequest as PatchProbationAssessmentRequest
+from ..model.patch_probation_assessment_response import PatchProbationAssessmentResponse as PatchProbationAssessmentResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class ProbationAssessment:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def create(self, request: CreateProbationAssessmentRequest, option: RequestOption | None = None) -> CreateProbationAssessmentResponse: ...
+    async def acreate(self, request: CreateProbationAssessmentRequest, option: RequestOption | None = None) -> CreateProbationAssessmentResponse: ...
+    def delete(self, request: DeleteProbationAssessmentRequest, option: RequestOption | None = None) -> DeleteProbationAssessmentResponse: ...
+    async def adelete(self, request: DeleteProbationAssessmentRequest, option: RequestOption | None = None) -> DeleteProbationAssessmentResponse: ...
+    def patch(self, request: PatchProbationAssessmentRequest, option: RequestOption | None = None) -> PatchProbationAssessmentResponse: ...
+    async def apatch(self, request: PatchProbationAssessmentRequest, option: RequestOption | None = None) -> PatchProbationAssessmentResponse: ...

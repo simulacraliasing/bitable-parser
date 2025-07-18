@@ -1,0 +1,23 @@
+from ..model.get_app_skill_request import GetAppSkillRequest as GetAppSkillRequest
+from ..model.get_app_skill_response import GetAppSkillResponse as GetAppSkillResponse
+from ..model.list_app_skill_request import ListAppSkillRequest as ListAppSkillRequest
+from ..model.list_app_skill_response import ListAppSkillResponse as ListAppSkillResponse
+from ..model.start_app_skill_request import StartAppSkillRequest as StartAppSkillRequest
+from ..model.start_app_skill_response import StartAppSkillResponse as StartAppSkillResponse
+from lark_oapi.core import JSON as JSON
+from lark_oapi.core.const import APPLICATION_JSON as APPLICATION_JSON, CONTENT_TYPE as CONTENT_TYPE, UTF_8 as UTF_8
+from lark_oapi.core.http import Transport as Transport
+from lark_oapi.core.model import Config as Config, RawResponse as RawResponse, RequestOption as RequestOption
+from lark_oapi.core.token import verify as verify
+from lark_oapi.core.utils import Files as Files
+from requests_toolbelt import MultipartEncoder as MultipartEncoder
+
+class AppSkill:
+    config: Config
+    def __init__(self, config: Config) -> None: ...
+    def get(self, request: GetAppSkillRequest, option: RequestOption | None = None) -> GetAppSkillResponse: ...
+    async def aget(self, request: GetAppSkillRequest, option: RequestOption | None = None) -> GetAppSkillResponse: ...
+    def list(self, request: ListAppSkillRequest, option: RequestOption | None = None) -> ListAppSkillResponse: ...
+    async def alist(self, request: ListAppSkillRequest, option: RequestOption | None = None) -> ListAppSkillResponse: ...
+    def start(self, request: StartAppSkillRequest, option: RequestOption | None = None) -> StartAppSkillResponse: ...
+    async def astart(self, request: StartAppSkillRequest, option: RequestOption | None = None) -> StartAppSkillResponse: ...
